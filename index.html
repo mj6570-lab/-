@@ -171,6 +171,23 @@ p.lead{ color:var(--muted); margin:0 0 8px 0 }
     border-radius: 10px;
   }
 }
+/* 핸드폰 전용 */
+@media (max-width: 767px) {
+  .modal-content {
+    max-width: 90%; /* 화면 너비의 90%로 축소 */
+    border-radius: 8px;
+    transform: scale(0.95); /* 조금 작게 */
+  }
+
+  .modal-grid {
+    grid-template-columns: 1fr; /* 1열로 */
+  }
+
+  .modal-cover {
+    max-height: 200px; /* 이미지 조금 작게 */
+    object-fit: cover;
+  }
+}
 .modal-content.show{ transform:none; opacity:1 }
 .modal-grid{ display:grid; grid-template-columns: 1fr 1fr }
 .modal-cover{ width:100%; height:100%; object-fit:cover }
@@ -507,6 +524,7 @@ document.addEventListener('DOMContentLoaded', function(){
 </body>
 
 </html>
+
 
 
 
